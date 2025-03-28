@@ -107,7 +107,7 @@ nohup mitosis gridsearch \
     --param +gridsearch.plot_prefs=all-kernel &> mock.log &
 
 nohup mitosis gridsearch \
-    -F trials/defense-kernel \
+    -F trials/kernel \
     -e gridsearch.seed=19 \
     -e gridsearch.group=\"lorenz\" \
     --param gridsearch.metrics=all \
@@ -118,7 +118,7 @@ nohup mitosis gridsearch \
     --param +gridsearch.plot_prefs=all-kernel  &> lorenz.log &
 
 nohup mitosis gridsearch \
-    -F trials/defense-kernel \
+    -F trials/kernel \
     -e gridsearch.seed=19 \
     -e gridsearch.group=\"cubic_ho\" \
     --param gridsearch.metrics=all \
@@ -129,7 +129,7 @@ nohup mitosis gridsearch \
     --param +gridsearch.plot_prefs=all-kernel  &> cubic_ho.log &
 
 nohup mitosis gridsearch \
-    -F trials/defense-kernel \
+    -F trials/kernel \
     -e gridsearch.seed=19 \
     -e gridsearch.group=\"sho\" \
     --param gridsearch.metrics=all \
@@ -140,7 +140,7 @@ nohup mitosis gridsearch \
     --param +gridsearch.plot_prefs=all-kernel  &> sho.log &
 
 nohup mitosis gridsearch \
-    -F trials/defense-kernel \
+    -F trials/kernel \
     -e gridsearch.seed=19 \
     -e gridsearch.group=\"vdp\" \
     --param gridsearch.metrics=all \
@@ -151,7 +151,7 @@ nohup mitosis gridsearch \
     --param +gridsearch.plot_prefs=all-kernel  &> vdp.log &
 
 nohup mitosis gridsearch \
-    -F trials/defense-kernel \
+    -F trials/kernel \
     -e gridsearch.seed=19 \
     -e gridsearch.group=\"lv\" \
     --param gridsearch.metrics=all \
@@ -162,7 +162,7 @@ nohup mitosis gridsearch \
     --param +gridsearch.plot_prefs=all-kernel  &> lv.log &
 
 nohup mitosis gridsearch \
-    -F trials/defense-kernel \
+    -F trials/kernel \
     -e gridsearch.seed=19 \
     -e gridsearch.group=\"duff\" \
     --param gridsearch.metrics=all \
@@ -173,7 +173,7 @@ nohup mitosis gridsearch \
     --param +gridsearch.plot_prefs=all-kernel  &> duff.log &
 
 nohup mitosis gridsearch \
-    -F trials/defense-kernel \
+    -F trials/kernel \
     -e gridsearch.seed=19 \
     -e gridsearch.group=\"hopf\" \
     --param gridsearch.metrics=all \
@@ -184,7 +184,7 @@ nohup mitosis gridsearch \
     --param +gridsearch.plot_prefs=all-kernel  &> hopf.log &
 
 nohup mitosis gridsearch \
-    -F trials/defense-kernel \
+    -F trials/kernel \
     -e gridsearch.seed=19 \
     -e gridsearch.group=\"ross\" \
     --param gridsearch.metrics=all \

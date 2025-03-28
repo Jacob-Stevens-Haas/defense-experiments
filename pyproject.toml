@@ -7,7 +7,7 @@ name = "defense-experiments"
 authors = [
     {name="Jake Stevens-Haas", email="jacob.stevens.haas@gmail.com"},
 ]
-license = {text = "MIT"}
+license = "MIT"
 requires-python = ">=3.10"
 dynamic = ["version"]
 dependencies = [
@@ -18,7 +18,7 @@ dependencies = [
 ]
 
 [tool.setuptools]
-packages = ["defense-experiments"]
+packages = ["defense_experiments"]
 
 [tool.isort]
 profile = "black"
