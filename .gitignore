@@ -1,0 +1,13 @@
+env
+.vscode/
+*.aux
+*.pdf
+*.log
+*.fls
+*.blg
+*.bbl
+*.gz
+*.fdb_latexmk
+*.egg-info/
+todo
+commit-msg

@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61.0", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "defense-experiments"
+authors = [
+    {name="Jake Stevens-Haas", email="jacob.stevens.haas@gmail.com"},
+]
+license = {text = "MIT"}
+requires-python = ">=3.10"
+dynamic = ["version"]
+dependencies = [
+    "matplotlib",
+    "pysindy-experiments @ git+https://github.com/Jacob-Stevens-Haas/gen-experiments.git@defense",
+    "mitosis>=0.5.7",
+    "pre-commit",
+]
+
+[tool.setuptools]
+packages = ["defense-experiments"]
+
+[tool.isort]
+profile = "black"
+
+[tool.codespell]
+ignore-words-list = "ND"
+
+[tool.mitosis.steps]
+gridsearch = ["gen_experiments.gridsearch:run", "defense_experiments.config:lu"]
+data = ["gen_experiments.data:gen_data", "defense_experiments.config:lu"]
+odes = ["gen_experiments.odes:run", "defense_experiments.config:lu"]
+ablate = ["gen_experiments.odes:ablate_feat", "defense_experiments.config:lu"]
