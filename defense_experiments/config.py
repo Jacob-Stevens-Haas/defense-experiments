@@ -81,6 +81,7 @@ sim_params = {
     "test-r2": ND({"n_trajectories": 2, "noise_rel": 0.1}),
     "test-r3": ND({"n_trajectories": 2, "noise_rel": 0.3}),
     "10x": ND({"n_trajectories": 10}),
+    "10x-plot-noise": ND({"n_trajectories": 10, "noise_rel": 0.1, "t_end": 8}),
 }
 diff_params = {
     "test": ND({"diffcls": "FiniteDifference"}),
