@@ -18,7 +18,7 @@ dependencies = [
 ]
 
 [tool.setuptools]
-packages = ["defense_experiments"]
+packages = ["defense_experiments", "ksindy_figs"]
 
 [tool.isort]
 profile = "black"
