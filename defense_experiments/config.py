@@ -234,6 +234,7 @@ grid_params = {
 grid_vals: dict[str, list[Iterable]] = {
     "small_even": [np.logspace(-2, 2, 5)],
     "small_even2": [np.logspace(-2, 2, 5), np.logspace(-2, 2, 5)],
+    "more_noise": [np.logspace(0, 4, 3), np.logspace(-2, 2, 5)],
     "duration-absnoise": [[0.5, 1, 2, 4, 8, 16], [0.1, 0.5, 1, 2, 4, 8]],
     "rel_noise": [[0.5, 1, 2, 4, 8, 16], [0.05, 0.1, 0.15, 0.2, 0.25, 0.3]],
 }

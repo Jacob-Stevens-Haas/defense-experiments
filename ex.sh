@@ -124,7 +124,7 @@ nohup mitosis gridsearch \
     --param gridsearch.metrics=all \
     --param gridsearch.other_params=4nonzero-kernel \
     --param gridsearch.grid_params=kernel_noise_scale \
-    --param gridsearch.grid_vals=small_even2 \
+    --param gridsearch.grid_vals=more_noise \
     --param gridsearch.grid_decisions=noplot \
     --param +gridsearch.plot_prefs=all-kernel  &> cubic_ho.log &
 
