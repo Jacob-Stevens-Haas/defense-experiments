@@ -46,6 +46,13 @@ def quadratic(x):
     return x * x
 
 
+def cubic(x, y, z):
+    return x * y * z
+
+def cubic_print(x, y, z):
+    return f"{x}*{y}*{z}"
+
+
 def addn(x):
     return x + x
 
@@ -105,16 +112,18 @@ feat_params = {
     "test2": ND({"featcls": "Fourier"}),
     "cubic": ND({"featcls": "Polynomial", "degree": 3}),
     "linear": ND({"featcls": "Polynomial", "degree": 1}),
-    "lin-cubic": (
+    "lin-cubic-named": (
         ps.PolynomialLibrary(1)
-        + ps.CustomLibrary([lambda x, y, z: x*y*z], interaction_only=False)
+        + ps.CustomLibrary([cubic], [cubic_print], interaction_only=False)
     ),
     "quadratic": ND({"featcls": "Polynomial", "degree": 2}),
     "quadratic-noconst": ND(
         {"featcls": "Polynomial", "degree": 2, "include_bias": False}
     ),
     "testweak": ND({"featcls": "weak"}),
-    "weak-quad": ND({"featcls": "weak", "function_library": ps.PolynomialLibrary(2), "K": 250}),
+    "weak-quad": ND(
+        {"featcls": "weak", "function_library": ps.PolynomialLibrary(2), "K": 250}
+    ),
     "lin-plus-sin": ps.PolynomialLibrary() + ps.FourierLibrary(2),
     "short-lin-sin": ps.PolynomialLibrary(1) + ps.FourierLibrary(1),
 }

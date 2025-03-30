@@ -11,7 +11,8 @@ nohup mitosis data odes \
     -e data.dt=.01 \
     -p odes.diff_params=sfd-ps \
     -p odes.feat_params=quadratic \
-    -p odes.opt_params=ensmio-lorenz-ross &> fig1.2a.log &
+    -p odes.opt_params=ensmio-lorenz-ross \
+    -e odes.return_all=True &> fig1.2a.log &
 
 nohup mitosis data odes \
     -F trials/intro \
@@ -23,7 +24,8 @@ nohup mitosis data odes \
     -e data.dt=.01 \
     -p odes.diff_params=sfd-ps \
     -p odes.feat_params=quadratic \
-    -p odes.opt_params=ensmio-lorenz-ross &> fig1.2b.log &
+    -p odes.opt_params=ensmio-lorenz-ross \
+    -e odes.return_all=True &> fig1.2b.log &
 
 nohup mitosis data odes \
     -F trials/intro \
@@ -35,7 +37,8 @@ nohup mitosis data odes \
     -e data.dt=.05 \
     -p odes.diff_params=sfd-ps \
     -p odes.feat_params=quadratic \
-    -p odes.opt_params=ensmio-lorenz-ross &> fig1.2c.log &
+    -p odes.opt_params=ensmio-lorenz-ross \
+    -e odes.return_all=True &> fig1.2c.log &
 
 nohup mitosis data odes \
     -F trials/intro \
@@ -47,30 +50,33 @@ nohup mitosis data odes \
     -e data.dt=.01 \
     -p odes.diff_params=sfd-ps \
     -p odes.feat_params=quadratic \
-    -p odes.opt_params=ensmio-lorenz-ross &> fig1.2d.log &
+    -p odes.opt_params=ensmio-lorenz-ross \
+    -e odes.return_all=True &> fig1.2d.log &
 
 # Figure 1.3
 nohup mitosis data odes \
     -F trials/intro \
     -e data.group=\"vdp\" \
     -e data.seed=6 \
-    -e data.t_end=10 \
+    -e data.t_end=25 \
     -e data.noise_rel=0.01 \
     -e data.dt=.05 \
     -p odes.diff_params=sfd-ps \
     -p odes.feat_params=quadratic \
-    -p odes.opt_params=miosr-vdp-quad &> fig1.3a.log &
+    -p odes.opt_params=miosr-vdp-quad \
+    -e odes.return_all=True &> fig1.3a.log &
 
 nohup mitosis data odes \
     -F trials/intro \
     -e data.group=\"vdp\" \
     -e data.seed=6 \
-    -e data.t_end=10 \
+    -e data.t_end=25 \
     -e data.noise_rel=0.01 \
     -e data.dt=.05 \
     -p odes.diff_params=sfd-ps \
     -p odes.feat_params=cubic \
-    -p odes.opt_params=miosr-vdp-cub &> fig1.3b.log &
+    -p odes.opt_params=miosr-vdp-cub \
+    -e odes.return_all=True &> fig1.3b.log &
 
 nohup mitosis data odes \
     -F trials/intro \
@@ -82,7 +88,8 @@ nohup mitosis data odes \
     -e data.dt=.05 \
     -p odes.diff_params=sfd-ps \
     -p odes.feat_params=short-lin-sin \
-    -p odes.opt_params=enslsq &> fig1.3c.log &
+    -p odes.opt_params=enslsq \
+    -e odes.return_all=True  &> fig1.3c.log &
 
 # Fig 1.4
 nohup mitosis data odes \
@@ -95,7 +102,8 @@ nohup mitosis data odes \
     -e data.dt=.01 \
     -p odes.diff_params=sfd-ps \
     -p odes.feat_params=quadratic \
-    -p odes.opt_params=ensmio-lorenz-ross &> fig1.4a.log &
+    -p odes.opt_params=ensmio-lorenz-ross \
+    -e odes.return_all=True  &> fig1.4a.log &
 
 nohup mitosis data ablate \
     -F trials/intro \
@@ -107,7 +115,8 @@ nohup mitosis data ablate \
     -e data.dt=.01 \
     -p ablate.diff_params=sfd-ps \
     -p ablate.feat_params=quadratic \
-    -p ablate.opt_params=miosr-vdp-cub &> fig1.4b.log &
+    -p ablate.opt_params=miosr-vdp-cub \
+    -e ablate.return_all=True  &> fig1.4b.log &
 
 nohup mitosis data odes \
     -F trials/intro \
@@ -118,7 +127,8 @@ nohup mitosis data odes \
     -e data.dt=.05 \
     -p odes.diff_params=sfd-ps-smooth \
     -p odes.feat_params=quadratic \
-    -p odes.opt_params=test &> fig1.4c.log &
+    -p odes.opt_params=test \
+    -e odes.return_all=True &> fig1.4c.log &
 
 nohup mitosis data odes \
     -F trials/intro \
@@ -128,8 +138,9 @@ nohup mitosis data odes \
     -e data.noise_abs=0.2 \
     -e data.dt=.05 \
     -p odes.diff_params=sfd-ps-smooth \
-    -p odes.feat_params=lin-cubic \
-    -p odes.opt_params=test &> fig1.4d.log &
+    -p odes.feat_params=lin-cubic-named \
+    -p odes.opt_params=test \
+    -e odes.return_all=True &> fig1.4d.log &
 
 
 
