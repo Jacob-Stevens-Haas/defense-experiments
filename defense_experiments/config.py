@@ -88,6 +88,11 @@ diff_params = {
     "autoks": ND({"diffcls": "sindy", "kind": "kalman", "alpha": "gcv"}),
     "tv": ND({"diffcls": "sindy", "kind": "trend_filtered", "order": 0, "alpha": 1}),
     "sfd-ps": ND({"diffcls": "SmoothedFiniteDifference"}),
+    "sfd-ps-smooth": ND({"diffcls": "SmoothedFiniteDifference", "smoother_kws": {"window_length": 10}}),
+    "sfd-ps-xsmooth": ND({
+        "diffcls": "SmoothedFiniteDifference",
+        "smoother_kws": {"window_length": 50, "polyorder": 2}
+    }),
     "kalman": ND({"diffcls": "sindy", "kind": "kalman", "alpha": 0.000055}),
     "kalman-empty2": ND({"diffcls": "sindy", "kind": "kalman", "alpha": None}),
     "kalman-auto": ND(
@@ -99,12 +104,19 @@ feat_params = {
     "test": ND({"featcls": "Polynomial"}),
     "test2": ND({"featcls": "Fourier"}),
     "cubic": ND({"featcls": "Polynomial", "degree": 3}),
+    "linear": ND({"featcls": "Polynomial", "degree": 1}),
+    "lin-cubic": (
+        ps.PolynomialLibrary(1)
+        + ps.CustomLibrary([lambda x, y, z: x*y*z], interaction_only=False)
+    ),
     "quadratic": ND({"featcls": "Polynomial", "degree": 2}),
     "quadratic-noconst": ND(
         {"featcls": "Polynomial", "degree": 2, "include_bias": False}
     ),
     "testweak": ND({"featcls": "weak"}),
-    "lin-plus-sin": ps.PolynomialLibrary() + ps.FourierLibrary(2)
+    "weak-quad": ND({"featcls": "weak", "function_library": ps.PolynomialLibrary(2), "K": 250}),
+    "lin-plus-sin": ps.PolynomialLibrary() + ps.FourierLibrary(2),
+    "short-lin-sin": ps.PolynomialLibrary(1) + ps.FourierLibrary(1),
 }
 opt_params = {
     "test": ND({"optcls": "STLSQ"}),

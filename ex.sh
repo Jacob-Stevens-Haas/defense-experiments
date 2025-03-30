@@ -3,14 +3,51 @@
 # Figure 1.2
 nohup mitosis data odes \
     -F trials/intro \
+    -e data.group=\"lorenz\" \
+    -e data.seed=6 \
+    -e data.t_end=10 \
+    -e data.noise_abs=0.2 \
+    -e data.n_trajectories=2 \
+    -e data.dt=.01 \
+    -p odes.diff_params=sfd-ps \
+    -p odes.feat_params=quadratic \
+    -p odes.opt_params=ensmio-lorenz-ross &> fig1.2a.log &
+
+nohup mitosis data odes \
+    -F trials/intro \
+    -e data.group=\"lorenz\" \
+    -e data.seed=6 \
+    -e data.t_end=10 \
+    -e data.noise_abs=2.0 \
+    -e data.n_trajectories=2 \
+    -e data.dt=.01 \
+    -p odes.diff_params=sfd-ps \
+    -p odes.feat_params=quadratic \
+    -p odes.opt_params=ensmio-lorenz-ross &> fig1.2b.log &
+
+nohup mitosis data odes \
+    -F trials/intro \
+    -e data.group=\"lorenz\" \
+    -e data.seed=6 \
+    -e data.t_end=10 \
+    -e data.noise_abs=0.2 \
+    -e data.n_trajectories=2 \
+    -e data.dt=.05 \
+    -p odes.diff_params=sfd-ps \
+    -p odes.feat_params=quadratic \
+    -p odes.opt_params=ensmio-lorenz-ross &> fig1.2c.log &
+
+nohup mitosis data odes \
+    -F trials/intro \
     -e data.group=\"lorenz_sin_forced\" \
     -e data.seed=6 \
     -e data.t_end=10 \
-    -e data.noise_rel=.1 \
-    -e data.dt=.4 \
+    -e data.noise_abs=0.2 \
+    -e data.n_trajectories=2 \
+    -e data.dt=.01 \
     -p odes.diff_params=sfd-ps \
-    -p odes.feat_params=testweak \
-    -p odes.opt_params=ensmio-lorenz-ross &> fig1.2.log &
+    -p odes.feat_params=quadratic \
+    -p odes.opt_params=ensmio-lorenz-ross &> fig1.2d.log &
 
 # Figure 1.3
 nohup mitosis data odes \
@@ -24,7 +61,6 @@ nohup mitosis data odes \
     -p odes.feat_params=quadratic \
     -p odes.opt_params=miosr-vdp-quad &> fig1.3a.log &
 
-# Works, needs tweak!
 nohup mitosis data odes \
     -F trials/intro \
     -e data.group=\"vdp\" \
@@ -36,7 +72,6 @@ nohup mitosis data odes \
     -p odes.feat_params=cubic \
     -p odes.opt_params=miosr-vdp-cub &> fig1.3b.log &
 
-# Works, needs tweak!
 nohup mitosis data odes \
     -F trials/intro \
     -e data.group=\"pendulum\" \
@@ -46,44 +81,55 @@ nohup mitosis data odes \
     -e data.noise_rel=0.01 \
     -e data.dt=.05 \
     -p odes.diff_params=sfd-ps \
-    -p odes.feat_params=lin-plus-sin \
+    -p odes.feat_params=short-lin-sin \
     -p odes.opt_params=enslsq &> fig1.3c.log &
 
 # Fig 1.4
+nohup mitosis data odes \
+    -F trials/intro \
+    -e data.group=\"lorenz\" \
+    -e data.seed=6 \
+    -e data.t_end=10 \
+    -e data.noise_rel=0.0 \
+    -e data.n_trajectories=2 \
+    -e data.dt=.01 \
+    -p odes.diff_params=sfd-ps \
+    -p odes.feat_params=quadratic \
+    -p odes.opt_params=ensmio-lorenz-ross &> fig1.4a.log &
+
 nohup mitosis data ablate \
     -F trials/intro \
     -e data.group=\"lorenz\" \
     -e data.seed=6 \
     -e data.t_end=10 \
-    -e data.noise_rel=0.01 \
-    -e data.dt=.05 \
+    -e data.noise_rel=0.0 \
+    -e data.n_trajectories=2 \
+    -e data.dt=.01 \
     -p ablate.diff_params=sfd-ps \
     -p ablate.feat_params=quadratic \
-    -p ablate.opt_params=miosr-vdp-cub &> fig1.4a.log &
+    -p ablate.opt_params=miosr-vdp-cub &> fig1.4b.log &
 
-# Works, needs tweak!
 nohup mitosis data odes \
     -F trials/intro \
     -e data.group=\"kinematics\" \
     -e data.seed=6 \
     -e data.t_end=10 \
-    -e data.noise_rel=0.01 \
+    -e data.noise_abs=0.2 \
     -e data.dt=.05 \
-    -p odes.diff_params=sfd-ps \
+    -p odes.diff_params=sfd-ps-smooth \
     -p odes.feat_params=quadratic \
-    -p odes.opt_params=test &> fig1.4b.log &
+    -p odes.opt_params=test &> fig1.4c.log &
 
-# Works, needs tweak!
 nohup mitosis data odes \
     -F trials/intro \
     -e data.group=\"kinematics\" \
     -e data.seed=6 \
     -e data.t_end=10 \
-    -e data.noise_rel=0.01 \
+    -e data.noise_abs=0.2 \
     -e data.dt=.05 \
-    -p odes.diff_params=sfd-ps \
-    -p odes.feat_params=quadratic-noconst \
-    -p odes.opt_params=test &> fig1.4c.log &
+    -p odes.diff_params=sfd-ps-smooth \
+    -p odes.feat_params=lin-cubic \
+    -p odes.opt_params=test &> fig1.4d.log &
 
 
 
