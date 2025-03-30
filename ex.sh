@@ -1,10 +1,8 @@
 
 ###############Failure experiments####################3
 # Figure 1.2
-# Works, needs tweak!
 nohup mitosis data odes \
-    --debug \
-    -F trials/defense \
+    -F trials/intro \
     -e data.group=\"lorenz_sin_forced\" \
     -e data.t_end=10 \
     -e data.noise_rel=.1 \
@@ -14,10 +12,8 @@ nohup mitosis data odes \
     -p odes.opt_params=ensmio-lorenz-ross &> fig1.2.log &
 
 # Figure 1.3
-# Works, needs tweak!
 nohup mitosis data odes \
-    --debug \
-    -F trials/defense \
+    -F trials/intro \
     -e data.group=\"vdp\" \
     -e data.t_end=10 \
     -e data.noise_rel=0.01 \
@@ -28,8 +24,7 @@ nohup mitosis data odes \
 
 # Works, needs tweak!
 nohup mitosis data odes \
-    --debug \
-    -F trials/defense \
+    -F trials/intro \
     -e data.group=\"vdp\" \
     -e data.t_end=10 \
     -e data.noise_rel=0.01 \
@@ -40,22 +35,20 @@ nohup mitosis data odes \
 
 # Works, needs tweak!
 nohup mitosis data odes \
-    --debug \
-    -F trials/defense \
+    -F trials/intro \
     -e data.group=\"pendulum\" \
+    -e data.seed=6 \
     -e data.t_end=10 \
-    -e data.ic_stdev=0.1
+    -e data.ic_stdev=0.1 \
     -e data.noise_rel=0.01 \
     -e data.dt=.05 \
     -p odes.diff_params=sfd-ps \
     -p odes.feat_params=lin-plus-sin \
-    -p odes.opt_params=stlsq &> fig1.3c.log &
+    -p odes.opt_params=enslsq &> fig1.3c.log &
 
 # Fig 1.4
-# HARD!
 nohup mitosis data ablate \
-    --debug \
-    -F trials/defense \
+    -F trials/intro \
     -e data.group=\"lorenz\" \
     -e data.t_end=10 \
     -e data.noise_rel=0.01 \
@@ -66,8 +59,7 @@ nohup mitosis data ablate \
 
 # Works, needs tweak!
 nohup mitosis data odes \
-    --debug \
-    -F trials/defense \
+    -F trials/intro \
     -e data.group=\"kinematics\" \
     -e data.t_end=10 \
     -e data.noise_rel=0.01 \
@@ -78,8 +70,7 @@ nohup mitosis data odes \
 
 # Works, needs tweak!
 nohup mitosis data odes \
-    --debug \
-    -F trials/defense \
+    -F trials/intro \
     -e data.group=\"kinematics\" \
     -e data.t_end=10 \
     -e data.noise_rel=0.01 \

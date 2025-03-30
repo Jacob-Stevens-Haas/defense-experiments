@@ -104,6 +104,7 @@ feat_params = {
         {"featcls": "Polynomial", "degree": 2, "include_bias": False}
     ),
     "testweak": ND({"featcls": "weak"}),
+    "lin-plus-sin": ps.PolynomialLibrary() + ps.FourierLibrary(2)
 }
 opt_params = {
     "test": ND({"optcls": "STLSQ"}),
