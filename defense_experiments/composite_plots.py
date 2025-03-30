@@ -6,11 +6,11 @@ exp_hexes = {
     "Cubic HO": ExpKey("c6b38a"),
     "Duffing": ExpKey("123648"),
     "Hopf": ExpKey("3cda30"),
-#    "Lotka-Volterra": ExpKey(""),
+    "Lotka-Volterra": ExpKey("decd55"),
     "Rossler": ExpKey("e667c6"),
-#    "SHO": ExpKey(""),
-#    "Van der Pol": ExpKey(""),
-#    "Lorenz": ExpKey(""),
+    "SHO": ExpKey("a3a41a"),
+    "Van der Pol": ExpKey("aba99e"),
+    "Lorenz": ExpKey("b46148"),
 }
 
 # %%
