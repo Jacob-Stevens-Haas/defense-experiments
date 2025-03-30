@@ -4,6 +4,7 @@
 nohup mitosis data odes \
     -F trials/intro \
     -e data.group=\"lorenz_sin_forced\" \
+    -e data.seed=6 \
     -e data.t_end=10 \
     -e data.noise_rel=.1 \
     -e data.dt=.4 \
@@ -15,6 +16,7 @@ nohup mitosis data odes \
 nohup mitosis data odes \
     -F trials/intro \
     -e data.group=\"vdp\" \
+    -e data.seed=6 \
     -e data.t_end=10 \
     -e data.noise_rel=0.01 \
     -e data.dt=.05 \
@@ -26,6 +28,7 @@ nohup mitosis data odes \
 nohup mitosis data odes \
     -F trials/intro \
     -e data.group=\"vdp\" \
+    -e data.seed=6 \
     -e data.t_end=10 \
     -e data.noise_rel=0.01 \
     -e data.dt=.05 \
@@ -50,6 +53,7 @@ nohup mitosis data odes \
 nohup mitosis data ablate \
     -F trials/intro \
     -e data.group=\"lorenz\" \
+    -e data.seed=6 \
     -e data.t_end=10 \
     -e data.noise_rel=0.01 \
     -e data.dt=.05 \
@@ -61,6 +65,7 @@ nohup mitosis data ablate \
 nohup mitosis data odes \
     -F trials/intro \
     -e data.group=\"kinematics\" \
+    -e data.seed=6 \
     -e data.t_end=10 \
     -e data.noise_rel=0.01 \
     -e data.dt=.05 \
@@ -72,6 +77,7 @@ nohup mitosis data odes \
 nohup mitosis data odes \
     -F trials/intro \
     -e data.group=\"kinematics\" \
+    -e data.seed=6 \
     -e data.t_end=10 \
     -e data.noise_rel=0.01 \
     -e data.dt=.05 \
